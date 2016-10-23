@@ -1,0 +1,6 @@
+node_modules
+.idea
+main.map.js
+main.min.js
+main.min.map.js
+main.js

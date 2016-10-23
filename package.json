@@ -1,0 +1,19 @@
+{
+  "name": "source-map-example",
+  "version": "0.0.0",
+  "dependencies": {
+    "inline-source-map": "^0.6.2",
+    "lite-server": "^2.2.2",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.1",
+    "source-map": "^0.5.6",
+    "uglify-js": "^2.7.3"
+  },
+  "scripts": {
+    "start": "lite-server",
+    "compile": "node compiler",
+    "compile:watch": "nodemon --ignore main.map.js --ignore main.js --exec 'npm run compile --silent'",
+    "compiler": "node compiler",
+    "uglify": "uglifyjs main.js -o main.min.js --source-map main.min.map.js"
+  }
+}
